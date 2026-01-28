@@ -1,0 +1,1 @@
+<h1>magasins</h1>
