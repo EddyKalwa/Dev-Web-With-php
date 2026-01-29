@@ -1,1 +1,5 @@
-<h1>contacts</h1>
+<?php $header = 'Contactez-nous' ?>
+<?php require 'portion/header.php'; ?>
+<h1 class="text-white">Contacts</h1>
+
+<?php require 'portion/footer.php'; ?>
