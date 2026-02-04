@@ -9,15 +9,15 @@
 
 <?php foreach($promotions as $magasin => $produits): ?>
 
-<div>
+<div >
     <h1 class='text-white'>Magasin : <?php echo $magasin; ?></h1>
+    <div class= "grid grid-cols-3 gap-3">
     <?php foreach($produits as $produit => $details): ?>
-    <p class='text-white'>Nom de l'article : <?php echo $produit; ?></p>
-    <p class='text-white'>Prix initial : <?php echo $details['prix-initial']; ?><?php echo $details['device']; ?></p>
-    <p class='text-white'>Prix promo: <?php echo $details['prix-promo']; ?><?php echo $details['device']; ?></p>
-    <p class='text-white'>reductionPourcentage: <?php echo round((($details['prix-initial'] - $details['prix-promo']) / $details['prix-initial']) * 100); ?>%</p>
-    <br>
-    <?php endforeach; ?>
+    
+    <?php require 'composants/offreCard.php'; ?>
+    <?php endforeach; ?>  
+    </div>
+    
 </div>
 
 <?php endforeach; ?>
