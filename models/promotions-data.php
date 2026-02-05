@@ -6,11 +6,13 @@ $promotions = [
             'prix-initial' => 350,
             'prix-promo' => 280,
             'device' => '$',
+            'image'=>'Iphone.jpeg',
         ],
         'prix Twiga' => [
             'prix-initial' => 53000,
             'prix-promo' => 42000,
             'device' => 'FC',
+            'image'=>'Twiga.jpeg',
         ],
     ],
     'kin Marche' => [
@@ -18,6 +20,7 @@ $promotions = [
             'prix-initial' => 37500,
             'prix-promo' => 22000,
             'device' => 'FC',
+            'image'=>'nido.jpeg',
         ],
     ],
 ];
