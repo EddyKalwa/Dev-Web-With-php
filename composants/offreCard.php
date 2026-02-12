@@ -1,6 +1,6 @@
 <div class="w-full max-w-sm bg-white border border-gray-100 rounded-xl shadow-md hover:shadow-xl transition-transform transform hover:scale-105 dark:bg-gray-900 dark:border-gray-700">
     <a href="#">
-        <img class="p-6 rounded-t-xl" src="<?php echo 'images/'.$details['image']; ?>" alt="product image" />
+        <img class="p-6 rounded-t-xl" src="<?php echo $details['image']; ?>" alt="product image" />
     </a> 
     <div class="px-4 pb-4">
         <a href="#">

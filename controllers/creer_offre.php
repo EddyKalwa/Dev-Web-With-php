@@ -1,8 +1,6 @@
 <?php 
-echo '<pre>';
-print_r($_POST);
-print_r($_FILES);
-echo '</pre>';
+
+session_start();
 
 $dossier_database= __DIR__.'/../database/';
 
@@ -40,9 +38,12 @@ $chemin_complet = $dossier_uploads . $nom_fichier;
 if(move_uploaded_file($_FILES['image']['tmp_name'], $chemin_complet)){
     $stmt = $pdo->prepare("INSERT INTO promotions (nom_produit, prix_initial, prix_promo, devise, magasin, chemin_image) VALUES (?, ?, ?, ?, ?, ?)");
     $stmt->execute([$nom_produit, $prix_initial, $prix_promo, $devise, $magasin, 'uploads/' . $magasin . '/' . $nom_fichier]);
-    echo "Promotion ajoutée avec succès!";
+    $_SESSION['success'] = "Promotion ajoutée avec succès!";
 } else {
-    echo "Erreur lors de l'upload de l'image.";
+    $_SESSION['error'] = "Erreur lors de l'upload de l'image.";
 }
+
+header('Location: ../publier.php');
+exit;
 ?>
 
